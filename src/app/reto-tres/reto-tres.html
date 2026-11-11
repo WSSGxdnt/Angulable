@@ -1,0 +1,52 @@
+<h1>Reto #3</h1>
+
+<form (ngSubmit)="registrar()">
+  <label>Nombre:</label>
+  <input
+    type="text"
+    name="nombre"
+    [(ngModel)]="nombre"
+    placeholder="Ingresa el nombre"
+  >
+
+  <br>
+
+  <label>Programa:</label>
+  <input
+    type="text"
+    name="programa"
+    [(ngModel)]="programa"
+    placeholder="Ingresa el programa"
+  >
+
+  <br>
+
+  <label>Edad:</label>
+  <input
+    type="number"
+    name="edad"
+    [(ngModel)]="edad"
+    placeholder="Ingresa la edad"
+  >
+
+  <br>
+
+  <button type="submit">Registrar</button>
+
+</form>
+
+<h2>Estudiantes registrados</h2>
+
+<ul>
+  @for (estudiante of estudiantes; track $index) {
+    <li>
+      <strong>{{ estudiante.nombre }}</strong>
+      <p>Programa: {{ estudiante.programa }}</p>
+      <p>Edad: {{ estudiante.edad }}</p>
+    </li>
+  } @empty {
+    <p>No hay estudiantes registrados todavía.</p>
+  }
+</ul>
+
+<hr>

@@ -1,0 +1,17 @@
+<h1>Reto #4</h1>
+
+<button (click)="cambioColorRojo()">Rojo</button>
+<button (click)="cambioColorNarangita()">Narangita</button>
+<button (click)="cambioColorVerdesito()">Verdesito</button>
+<br>
+
+<div [style.background-color]="Estado" style="border-radius: 500px; border: 1px solid #000000; width: 100px; height: 100px;">
+</div>
+ @if (Estado === 'red')
+    {<p>Detenerse</p>}
+  @if (Estado === 'yellow')
+    {<p>Precaución</p>}
+  @if (Estado === 'green')
+    {<p>Avanzar</p>}
+
+<hr>

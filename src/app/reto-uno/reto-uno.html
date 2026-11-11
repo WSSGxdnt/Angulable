@@ -1,0 +1,13 @@
+<h1>Reto #1</h1>
+    <input type="number" placeholder="Número 1" [(ngModel)]="contadoruno">
+    <input type="number" placeholder="Número 2" [(ngModel)]="contadordos"> 
+<br>
+<br>
+
+    <button (click)="sumar()">Aumentar</button>
+    <button (click)="restar()">Disminuir</button>
+
+    <h3>Resultado:</h3>
+    <h1 [(ngModel)]="resultado">{{ resultado }}</h1>
+
+  <hr>
